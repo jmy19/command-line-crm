@@ -1,3 +1,5 @@
+require "pry"
+
 class Rolodex
 	@@ids = 1
 	def initialize
@@ -51,8 +53,28 @@ class Rolodex
 	def modify_first(id)
 		puts "Type name:"
 		name = gets.chomp
-		contact = @contacts.find(id)
+		contact = @contacts.find(id).first
 		contact.first_name = name
 	end
+	
+	def modify_last(id)
+		puts "Type name:"
+		name = gets.chomp
+		contact = @contacts.find(id).first
+		contact.last_name = name
+	end
 
+	def modify_email(id)
+		puts "Type name:"
+		email = gets.chomp
+		contact = @contacts.find(id).first
+		contact.email = email
+	end
+
+	def modify_notes(id)
+		puts "Type name:"
+		notes = gets.chomp
+		contact = @contacts.find(id).first
+		contact.notes = notes
+	end
 end
