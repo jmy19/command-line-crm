@@ -48,4 +48,11 @@ class Rolodex
 		end
 	end
 
+	def modify_first(id)
+		puts "Type name:"
+		name = gets.chomp
+		contact = @contacts.find(id)
+		contact.first_name = name
+	end
+
 end
