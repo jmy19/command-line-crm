@@ -27,10 +27,10 @@ class Rolodex
 	def display_attr(attr_to_display)
 		@contacts.each do |contact|
 			case attr_to_display
-				when "first" then contact.first_name
-				when "last" then contact.last_name
-				when "email" then contact.email
-				when "notes" then contact.notes
+				when "first" then puts contact.first_name
+				when "last" then puts contact.last_name
+				when "email" then puts contact.email
+				when "notes" then puts contact.notes
 			end
 		end	
 	end
