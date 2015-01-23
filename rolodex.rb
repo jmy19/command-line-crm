@@ -1,5 +1,3 @@
-require "pry"
-
 class Rolodex
 	@@ids = 1
 	def initialize
@@ -27,11 +25,13 @@ class Rolodex
 	end
 
 	def display_attr(attr_to_display)
-		case attr_to_display
-			when "first" then @contacts.each { |x| puts x.first_name}
-			when "last" then @contacts.each { |x| puts x.last_name}
-			when "email" then @contacts.each { |x| puts x.email}
-			when "notes" then @contacts.each { |x| puts x.notes}
+		@contacts.each do |contact|
+			case attr_to_display
+				when "first" then contact.first_name
+				when "last" then contact.last_name
+				when "email" then contact.email
+				when "notes" then contact.notes
+			end
 		end	
 	end
 
@@ -43,10 +43,10 @@ class Rolodex
 		puts "[4] Modify notes"
 		option = gets.chomp.to_i
 		case option
-		when 1 then modify_first(id)
-		when 2 then modify_last(id)
-		when 3 then modify_email(id)
-		when 4 then modify_notes(id)
+			when 1 then modify_first(id)
+			when 2 then modify_last(id)
+			when 3 then modify_email(id)
+			when 4 then modify_notes(id)
 		end
 	end
 

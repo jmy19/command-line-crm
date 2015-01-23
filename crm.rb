@@ -32,15 +32,15 @@ class CRM
 
 	def choose_option(option)
 		case option
-		when 1 then add_contact
-		when 2 then modify_contact
-		when 3 then display_all
-		when 4 then display_one
-		when 5 then display_attr
-		when 6 then delete_contact
-		when 7 
-			puts "Goodbye!"
-			return
+			when 1 then add_contact
+			when 2 then modify_contact
+			when 3 then display_all
+			when 4 then display_one
+			when 5 then display_attr
+			when 6 then delete_contact
+			when 7 
+				puts "Goodbye!"
+				return
 		else 
 			puts "Incorrect option, try again!"
 		end
